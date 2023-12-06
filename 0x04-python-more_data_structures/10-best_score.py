@@ -2,5 +2,10 @@
 def best_score(a_dictionary):
     if not a_dictionary:
         return None
-    best = sorted(a_dictionary)
-    return best[-1]
+    value = 0
+    key = None
+    for i, j in a_dictionary.items():
+        if j > value:
+            value = j
+            key = i
+    return key
