@@ -11,6 +11,7 @@ class Square:
 
         Args:
             size (int): The square size
+            position (int, int): The position of the new square.
 
         """
         self.__size = size
@@ -58,7 +59,7 @@ class Square:
                 not all(isinstance(n, int) for n in value) or
                 not all(n >= 0 for n in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = position
+        self.__position = value
 
     def area(self):
         """Return the current area of the square."""
