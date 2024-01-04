@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""define Class Rectangle."""
+
+
 class Rectangle:
     """Represent a rectangle."""
     number_of_instances = 0
@@ -11,8 +14,8 @@ class Rectangle:
             height (int): The height of the rectangle
 
         """
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
