@@ -106,8 +106,12 @@ class Rectangle:
         """return a string representation of the rectangle for users"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(str(self.print_symbol) *
-                         self.__width for _ in range(self.__height))
+        rect = []
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return "".join(rect)
 
     def __repr__(self):
         """return a string representation of the rectangle for developer"""
