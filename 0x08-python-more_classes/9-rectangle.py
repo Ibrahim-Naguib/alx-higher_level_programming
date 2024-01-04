@@ -80,7 +80,7 @@ class Rectangle:
         Args:
             size (int): The size of the square.
         """
-        return (cls(size, size))
+        return cls(size, size)
 
     def __str__(self):
         """return a string representation of the rectangle for users"""
