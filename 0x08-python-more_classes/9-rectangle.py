@@ -115,7 +115,9 @@ class Rectangle:
 
     def __repr__(self):
         """return a string representation of the rectangle for developer"""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
 
     def __del__(self):
         """print a string after deleting a rectangle"""
