@@ -1,0 +1,61 @@
+The ``text_indentation`` module
+============================
+
+Using ``text_indentation``
+---------------------
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+======================
+Test passed:
+
+	>>> text_indentation("Hello world: Welcome to python. Python is fun?")
+	Hello world:
+	<BLANKLINE>
+	Welcome to python.
+	<BLANKLINE>
+	Python is fun?
+	<BLANKLINE>
+
+======================
+Test with new line in string:
+
+	>>> text_indentation("Hello world:\nWelcome to python.\nPython is fun?\n")
+	Hello world:
+	<BLANKLINE>
+	<BLANKLINE>
+	Welcome to python.
+	<BLANKLINE>
+	<BLANKLINE>
+	Python is fun?
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+
+======================
+Test with space at the start and the end:
+
+	>>> text_indentation(" Hello world: Welcome to python. Python is fun? ")
+	Hello world:
+	<BLANKLINE>
+	Welcome to python.
+	<BLANKLINE>
+	Python is fun?
+	<BLANKLINE>
+	<BLANKLINE>
+
+======================
+Test of other type:
+
+	>>> text_indentation(19)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+======================
+Test of other type:
+
+	>>> text_indentation(["hello", ":", "world"])
+	Traceback (most recent call last):
+	TypeError: text must be a string

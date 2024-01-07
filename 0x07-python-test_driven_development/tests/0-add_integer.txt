@@ -1,0 +1,53 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+Import the function:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+======================
+Test one int argument:
+
+	>>> add_integer(2)
+	100
+
+======================
+Test one int argument and check default second int:
+
+	>>> add_integer(0)
+	98
+
+======================
+Test one float argument:
+
+	>>> add_integer(102.7)
+	200
+
+======================
+Test one negative float argument:
+
+	>>> add_integer(-40.6)
+	58
+
+======================
+Test two int argument:
+
+	>>> add_integer(10, 15)
+	25
+
+======================
+Test first arg not integer value:
+
+	>>> add_integer("hi")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+======================
+Test second arg not integer value:
+
+	>>> add_integer(3, "hi")
+	Traceback (most recent call last):
+	TypeError: b must be an integer

@@ -1,0 +1,91 @@
+The ``2-matrix_divided`` module
+============================
+
+Using ``matrix_divided``
+---------------------
+
+Import the function:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+======================
+Test matrix with 2 rows:
+
+	>>> matrix_divided([
+	...    [1, 2, 3],
+	...    [4, 5, 6]
+	... ], 2)
+	[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+	
+======================
+Test matrix with one row and one item:
+
+	>>> matrix_divided([[8]], 2)
+	[[4.0]]
+	
+======================
+Test matrix with negative float numbers:
+
+	>>> matrix_divided([
+	...    [12.5, 5.2, -3.4],
+	...    [4.1, -5.2, 6.7]
+	... ], 2)
+	[[6.25, 2.6, -1.7], [2.05, -2.6, 3.35]]
+
+======================
+Test matrix not a list:
+
+	>>> matrix_divided("hello world", 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+======================
+Test empty matrix:
+
+	>>> matrix_divided([], 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+======================
+Test matrix is list of other types:
+
+	>>> matrix_divided([1, "hi", 4], 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+======================
+Test matrix is list of lists of other types:
+
+	>>> matrix_divided([["a", 2], [6, True]], 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+======================
+Test matrix with rows not the same size:
+
+	>>> matrix_divided([
+	...    [12, 6, 8],
+	...    [4, 10]
+	... ], 2)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+======================
+Test div is not a number:
+
+	>>> matrix_divided([
+	...    [1, 2, 3],
+	...    [4, 5, 6]
+	... ], "python")
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+======================
+Test div is 0:
+
+	>>> matrix_divided([
+	...    [1, 2, 3],
+	...    [4, 5, 6]
+	... ], 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
