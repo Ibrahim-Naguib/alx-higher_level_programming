@@ -36,3 +36,10 @@ Test append to list:
 	>>> my_list.append(5)
 	>>> my_list
 	[5]
+
+======================
+Test dup numbers:
+
+	>>> my_list = MyList([4, 2, 6, 2, 3, 4])
+	>>> my_list.print_sorted()
+	[2, 2, 3, 4, 4, 6]
