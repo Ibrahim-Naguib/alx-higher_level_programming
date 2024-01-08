@@ -66,3 +66,4 @@ Test Isinstance:
 	>>> my_list = MyList()
 	>>> isinstance(my_list, list)
 	True
+
