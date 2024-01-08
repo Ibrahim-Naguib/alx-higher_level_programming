@@ -67,3 +67,9 @@ Test Isinstance:
 	>>> isinstance(my_list, list)
 	True
 
+======================
+Test sorted method with no args:
+
+    >>> my_list.__class__.print_sorted()
+    Traceback (most recent call last):
+    TypeError: print_sorted() missing 1 required positional argument: 'self'
