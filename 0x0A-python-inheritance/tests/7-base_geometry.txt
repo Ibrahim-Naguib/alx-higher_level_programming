@@ -14,7 +14,7 @@ Test not implemented area:
 	>>> base_geometry = BaseGeometry()
 	>>> base_geometry.area()
 	Traceback (most recent call last):
-    Exception: area() is not implemented
+	Exception: area() is not implemented
 
 ======================
 Test other type:
@@ -22,7 +22,7 @@ Test other type:
 	>>> base_geometry = BaseGeometry()
 	>>> base_geometry.integer_validator("name", "python")
 	Traceback (most recent call last):
-    TypeError: name must be an integer
+	TypeError: name must be an integer
 
 ======================
 Test negative value:
@@ -30,7 +30,7 @@ Test negative value:
 	>>> base_geometry = BaseGeometry()
 	>>> base_geometry.integer_validator("name", -5)
 	Traceback (most recent call last):
-    TypeError: name must be greater than 0
+	ValueError: name must be greater than 0
 
 ======================
 Test zero value:
@@ -38,4 +38,4 @@ Test zero value:
 	>>> base_geometry = BaseGeometry()
 	>>> base_geometry.integer_validator("name", 0)
 	Traceback (most recent call last):
-    TypeError: name must be greater than 0
+	ValueError: name must be greater than 0
