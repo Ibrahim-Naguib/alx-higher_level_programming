@@ -39,3 +39,39 @@ Test zero value:
 	>>> base_geometry.integer_validator("name", 0)
 	Traceback (most recent call last):
 	ValueError: name must be greater than 0
+
+======================
+Test class type:
+
+	>>> base_geometry = BaseGeometry()
+	>>> type(base_geometry) == BaseGeometry
+	True
+
+======================
+Test area with 1 arg:
+
+	>>> base_geometry.area(5)
+	Traceback (most recent call last):
+	TypeError: area() takes 1 positional argument but 2 were given
+
+======================
+Test area method:
+
+	>>> base_geometry.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+======================
+Test integer_validator with no args:
+
+	>>> base_geometry.__class__.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+======================
+Test integer_validator with string:
+
+	>>> base_geometry.integer_validator("hello", "world")
+	Traceback (most recent call last):
+	TypeError: hello must be an integer
+
