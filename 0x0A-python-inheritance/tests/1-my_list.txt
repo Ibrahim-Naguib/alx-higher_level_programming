@@ -54,15 +54,15 @@ Test without using class:
 	AttributeError: 'list' object has no attribute 'print_sorted'
 	
 ======================
-Test class type:
+Test class Type:
 
 	>>> my_list = MyList()
 	>>> type(my_list) == MyList
-	True	
+	True
 
 ======================
-Test isinstance:
+Test Isinstance:
 
 	>>> my_list = MyList()
 	>>> isinstance(my_list, list)
-	True	
+	True
