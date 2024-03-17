@@ -10,11 +10,6 @@ Base = declarative_base(metadata=meta)
 class State(Base):
     """
     State class to represent states.
-
-    Attributes:
-        id (int): The primary key of the state.
-        name (str): The name of the state.
-        cities (relationship): Relationship to the City class.
     """
     __tablename__ = 'states'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
