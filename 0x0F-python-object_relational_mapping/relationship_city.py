@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 class City(Base):
     """
-    City class represents a city.
+    Class that defines each city
     """
     __tablename__ = 'cities'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)

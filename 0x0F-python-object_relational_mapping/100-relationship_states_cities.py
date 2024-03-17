@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Script that creates the State “California” with the City
-   “San Francisco” from the database hbtn_0e_100_usa
+"""
+Creates the State "California" with the City "San Francisco" from a DB
 """
 import sys
 from relationship_state import Base, State
@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     newState = State(name='California')
     newCity = City(name='San Francisco')
-    state.cities.append(newCity)
+    newState.cities.append(newCity)
 
     session.add(newState)
     session.add(newCity)
